@@ -26,11 +26,27 @@
     },
     {
       "title": "Calathea Orbifolia - Medium",
-      "id": 123,
+      "id": 128,
       "price": 999,
       "discounted_price": 899,
       "image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/calatheaorbifolianew_45_360x.png?v=1661439769",
       "handle": "calathea-orbifolia-medium"
+    },
+    {
+      "title": "Aloft planter",
+      "id": 2,
+      "price": 999,
+      "discounted_price": 999,
+      "image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/aloft_planter_1_360x.png?v=1661441290",
+      "handle": "aloft-planter"
+    },
+    {
+      "title": "Areca Palm Plant - Big",
+      "id": 3,
+      "price": 899,
+      "discounted_price": 899,
+      "image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/areca_45_360x.png?v=1661439729",
+      "handle": "areca-palm-plant-big"
     }
   ]
 }
