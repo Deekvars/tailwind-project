@@ -13,16 +13,35 @@
     </header>
 <!--    <div class="container mx-auto">-->
       <div class="product-card grid grid-cols-4 gap-1 container mx-20 max-w-fit mt-5">
-
+        <div v-for="item in resultData" :key="item.id">
+          <product-card :item="item"></product-card>
+        </div>
+<!--        <product-card></product-card>
         <product-card></product-card>
-        <product-card></product-card>
-        <product-card></product-card>
-        <product-card></product-card>
+        <product-card></product-card>-->
       </div>
 <!--    </div>-->
     <footer></footer>
   </div>
 </template>
+
+<script>
+import ProductCard from "@/components/Product-cards";
+import projectData from "../globalVariables/config.json";
+
+export default {
+  name: 'Product-cards',
+  components: {ProductCard},
+
+  data() {
+    return {
+      resultData : projectData.data
+    }
+  },
+
+}
+
+</script>
 
 <style>
 #app {
@@ -46,9 +65,3 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
-<script>
-import ProductCard from "@/components/Product-cards";
-export default {
-  components: {ProductCard}
-}
-</script>
