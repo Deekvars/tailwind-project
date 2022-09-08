@@ -15,15 +15,8 @@ export default {
     return {
       currency: 'Rs.'
     }
-  },
-  methods() {
-    return{
-      priceFormatter: function(price) {
-        return price.toString().concat('.00');
-      }
-    }
-
   }
+
 }
 </script>
 

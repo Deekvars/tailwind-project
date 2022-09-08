@@ -8,8 +8,8 @@
     </header>
 
       <div class="grid grid-cols-4 gap-1 container mx-20 max-w-fit mt-5">
-        <div v-for="item in resultData" :key="item.id">
-          <product-card :item="item"></product-card>
+        <div >
+          <product-card :item="resultData[0]"></product-card>
         </div>
       </div>
 
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import ProductCard from "@/components/Product-cards";
-import projectData from "../globalVariables/config.json";
+import ProductCard from "@/components/ProductCard";
+import projectData from "@/globalVariables/config.json";
 
 export default {
-  name: 'Product-cards',
+  name: 'ProductCard',
   components: {ProductCard},
 
   data() {
