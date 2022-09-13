@@ -6,6 +6,7 @@
       "price": 100,
       "discounted_price": 80,
       "image": "//cdn.shopify.com/s/files/1/0579/7924/0580/products/7.5-inch-set-of-5-multi-1_1.png",
+      "hover_image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/calatheaburle_45_360x.png?v=1661439774",
       "handle": ""
     },
     {
@@ -30,6 +31,7 @@
       "price": 999,
       "discounted_price": 899,
       "image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/calatheaorbifolianew_45_360x.png?v=1661439769",
+      "hover_image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/aloft_planter_1_360x.png?v=1661441290",
       "handle": "calathea-orbifolia-medium"
     },
     {
@@ -38,6 +40,7 @@
       "price": 999,
       "discounted_price": 999,
       "image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/aloft_planter_1_360x.png?v=1661441290",
+      "hover_image": "https://cdn.shopify.com/s/files/1/0579/7924/0580/products/calatheaorbifolianew_45_360x.png?v=1661439769",
       "handle": "aloft-planter"
     },
     {

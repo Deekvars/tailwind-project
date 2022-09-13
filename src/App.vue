@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import ProductCard from "@/components/Product-cards";
-import projectData from "../globalVariables/config.json";
+import ProductCard from "@/components/ProductCard";
+import projectData from "@/globalVariables/config.json";
 
 export default {
-  name: 'Product-cards',
+  name: 'Product-card',
   components: {ProductCard},
 
   data() {
