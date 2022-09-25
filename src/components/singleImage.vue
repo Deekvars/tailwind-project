@@ -1,7 +1,7 @@
 <template>
   <div>
     <slot>
-      <img :src="item.image" :alt="item.title">
+      <img :src="singleImg">
     </slot>
   </div>
 
@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  props: ['item'],
+  props: ['single-img'],
   data(){
     return {
 

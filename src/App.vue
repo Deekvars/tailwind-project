@@ -7,10 +7,8 @@
       </div>
     </header>
 
-      <div class="grid grid-cols-4 gap-1 container mx-20 max-w-fit mt-5">
-        <div v-for="item in resultData" :key="item.id">
-          <product-card :item="item"></product-card>
-        </div>
+      <div class="grid grid-cols-4 gap-4 container mx-20 max-w-fit mt-5">
+        <product-card :item="item" v-for="item in resultData" :key="item.id"></product-card>
       </div>
 
     <footer></footer>
