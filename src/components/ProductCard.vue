@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import SingleImage from "@/components/singleImage";
-import MultipleImages from "@/components/multipleImages";
+import SingleImage from "@/components/SingleImage";
+import MultipleImages from "@/components/MultipleImages";
 export default {
   components: {MultipleImages, SingleImage},
   props: ['item'],

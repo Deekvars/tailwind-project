@@ -1,8 +1,6 @@
 <template>
   <div>
-    <slot>
-      <img :src="singleImg">
-    </slot>
+    <img :src="singleImg">
   </div>
 
 </template>
