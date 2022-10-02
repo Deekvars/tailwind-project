@@ -33,18 +33,8 @@ export default {
 
       if(currIndex > 0 && type === 'previous') this.activeImage = this.multipleImg[currIndex - 1];
       else if(currIndex < this.multipleImg.length-1 && type === 'next') this.activeImage = this.multipleImg[currIndex + 1];
-      },
+      }
 
-    /*changeImage: function(type) {
-         let images = type === 'previous' ? [...this.multipleImg].reverse() : [...this.multipleImg];
-
-         for(let i = 0 ; i < images.length ; i++){
-           if(images[i] === this.activeImage && i !== images.length-1){
-             this.activeImage = images[i+1];
-             break;
-           }
-         }
-       },*/
   }
 }
 </script>
