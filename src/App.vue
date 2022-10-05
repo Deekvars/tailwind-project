@@ -2,13 +2,17 @@
   <div id="app">
 
     <header>
-      <div class="search-box mt-6">
-        <input class="w-96 p-0.5 pl-4 pr-4 bg-white shadow rounded" name="q" autocomplete="off" placeholder="Search">
+      <div class="flex-1 relative grid grid-cols-3 gap-3 container mx-auto mt-6 p-6">
+        <div class=""></div>
+        <div class="search-box inline-block">
+          <input class="w-96 p-0.5 pl-4 pr-4 bg-white shadow rounded" name="q" autocomplete="off" placeholder="Search">
+        </div>
+        <div class="inline-block absolute right-7 top-7"> Cart ({{ cartCount }})</div>
       </div>
     </header>
 
-      <div class="grid grid-cols-4 gap-4 container mx-20 max-w-fit mt-5">
-        <product-card :item="item" v-for="item in resultData" :key="item.id"></product-card>
+      <div class="grid grid-cols-4 gap-4 container mx-auto mt-5 p-6">
+        <product-card :item="item" v-for="item in resultData" :key="item.id" @updated-count="cartCount +=1"></product-card>
       </div>
 
     <footer></footer>
@@ -25,9 +29,16 @@ export default {
 
   data() {
     return {
-      resultData : projectData.data
+      resultData : projectData.data,
+      cartCount : 0
     }
   },
+  /*methods: {
+    increaseCount(){
+      console.log('inc')
+      this.cartCount +=1;
+    }
+  }*/
 
 }
 
