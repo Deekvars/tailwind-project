@@ -16,7 +16,7 @@
               <del>{{ currency }} {{ item.price }}</del>
           </span>
         </div>
-        <div class="m-2 bg-black text-white p-2 border rounded-lg cursor-pointer" @click="$emit('updated-count')">Add To Cart</div>
+        <div class="m-2 bg-black text-white p-2 border rounded-lg cursor-pointer" @click="$emit('update-count')">Add To Cart</div>
       </div>
 
     </div>

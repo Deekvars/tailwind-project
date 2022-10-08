@@ -1,44 +1,27 @@
 <template>
   <div id="app">
 
-    <header>
-      <div class="flex-1 relative grid grid-cols-3 gap-3 container mx-auto mt-6 p-6">
-        <div class=""></div>
-        <div class="search-box inline-block">
-          <input class="w-96 p-0.5 pl-4 pr-4 bg-white shadow rounded" name="q" autocomplete="off" placeholder="Search">
-        </div>
-        <div class="inline-block absolute right-7 top-7"> Cart ({{ cartCount }})</div>
-      </div>
-    </header>
+    <site-header :updated-count="cartCount"></site-header>
 
-      <div class="grid grid-cols-4 gap-4 container mx-auto mt-5 p-6">
-        <product-card :item="item" v-for="item in resultData" :key="item.id" @updated-count="cartCount +=1"></product-card>
-      </div>
+    <body-container @update-header-cart="cartCount+=1"></body-container>
 
-    <footer></footer>
+    <site-footer></site-footer>
   </div>
 </template>
 
 <script>
-import ProductCard from "@/components/ProductCard";
-import projectData from "@/globalVariables/config.json";
+import SiteHeader from "@/components/SiteHeader";
+import BodyContainer from "@/components/BodyContainer";
+import SiteFooter from "@/components/SiteFooter";
 
 export default {
-  name: 'Product-card',
-  components: {ProductCard},
+  components: {SiteFooter, BodyContainer, SiteHeader},
 
   data() {
     return {
-      resultData : projectData.data,
       cartCount : 0
     }
-  },
-  /*methods: {
-    increaseCount(){
-      console.log('inc')
-      this.cartCount +=1;
-    }
-  }*/
+  }
 
 }
 
