@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../components/HomePage.vue'
+import HomeView from '../views/HomePage.vue'
 
 Vue.use(VueRouter)
 
@@ -16,12 +16,12 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../components/WishlistPage.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/WishlistPage.vue')
   },
   {
     path: '/cart',
     name: 'cart',
-    component: () => import(/* webpackChunkName: "about" */ '../components/CartPage.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/CartPage.vue')
   }
 ]
 
