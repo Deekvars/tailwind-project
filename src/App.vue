@@ -3,7 +3,7 @@
 
     <site-header :updated-count="cartCount"></site-header>
 
-    <body-container @update-header-cart="cartCount+=1"></body-container>
+    <router-view @update-header-cart="cartCount+=1"></router-view>
 
     <site-footer></site-footer>
   </div>
@@ -11,11 +11,10 @@
 
 <script>
 import SiteHeader from "@/components/SiteHeader";
-import BodyContainer from "@/components/BodyContainer";
 import SiteFooter from "@/components/SiteFooter";
 
 export default {
-  components: {SiteFooter, BodyContainer, SiteHeader},
+  components: {SiteFooter, SiteHeader},
 
   data() {
     return {
