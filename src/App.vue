@@ -1,11 +1,11 @@
 <template>
   <div id="app">
 
-    <site-header :updated-count="cartCount"></site-header>
+    <site-header />
 
-    <router-view @update-header-cart="cartCount+=1"></router-view>
+    <router-view />
 
-    <site-footer></site-footer>
+    <site-footer />
   </div>
 </template>
 
@@ -14,14 +14,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 export default {
-  components: {SiteFooter, SiteHeader},
-
-  data() {
-    return {
-      cartCount : 0
-    }
-  }
-
+  components: {SiteFooter, SiteHeader}
 }
 
 </script>

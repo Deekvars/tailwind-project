@@ -8,17 +8,10 @@
 
       <div class="relative">
         <router-link to="/wishlist" class="inline-block absolute">Wishlist</router-link>
-        <router-link to="/cart" class="inline-block absolute right-7"> Cart ({{ updatedCount }})</router-link>
+        <router-link to="/cart" class="inline-block absolute right-7"> Cart ({{ this.$store.state.count }})</router-link>
       </div>
 
     </div>
   </header>
 </template>
 
-<script>
-
-export default {
-  props: ['updatedCount']
-
-}
-</script>
