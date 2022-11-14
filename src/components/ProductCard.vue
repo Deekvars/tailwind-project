@@ -16,7 +16,7 @@
               <del>{{ currency }} {{ item.price }}</del>
           </span>
         </div>
-        <div class="m-2 bg-black text-white p-2 border rounded-lg cursor-pointer" @click="$store.commit('increment')">Add To Cart</div>
+        <div class="m-2 bg-black text-white p-2 border rounded-lg cursor-pointer" @click="$store.commit('doIncreaseCartCount')">Add To Cart</div>
       </div>
 
     </div>
