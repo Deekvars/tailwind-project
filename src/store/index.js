@@ -22,13 +22,21 @@ const store = new Vuex.Store({
     actions: {
         addToCart ({commit,state}, payload) {
             console.log(payload, commit, state);
-            state.count++;
-            state.productAddedToCart.push(payload.data);
+            let prodAlreadyAdded = state.productAddedToCart.find(prod => prod.id === payload.data.id);
+            if(prodAlreadyAdded) alert('already Added');
+            else {
+                state.count++;
+                state.productAddedToCart.push(payload.data);
+            }
         },
         getProductWishlist(state,payload){
             console.log(state);
-            state.state.wishlistCount++;
-            store.state.wishListedProducts.push(payload.data);
+            let prodAlreadyAdded = state.state.wishListedProducts.find(prod => prod.id === payload.data.id);
+            if(prodAlreadyAdded) alert('already wishlisted');
+            else {
+                state.state.wishlistCount++;
+                store.state.wishListedProducts.push(payload.data);
+            }
         }
     }
 });

@@ -16,8 +16,8 @@
               <del>{{ currency }} {{ item.price }}</del>
           </span>
         </div>
-        <div class="m-2 bg-black text-white p-2 border rounded-lg cursor-pointer" @click="$store.dispatch({type: 'getProductWishlist', data: item})">Wishlist</div>
-        <div class="m-2 bg-black text-white p-2 border rounded-lg cursor-pointer" @click="$store.dispatch({type: 'addToCart', data: item})">Add To Cart</div>
+        <slot name="btnOne"></slot>
+        <slot name="btnTwo"></slot>
       </div>
 
     </div>
