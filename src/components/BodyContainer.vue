@@ -11,16 +11,33 @@
 
 <script>
 import ProductCard from "@/components/ProductCard";
-import projectData from "@/globalVariables/config.json";
+//import projectData from "@/globalVariables/config.json";
 import AtcButton from "@/components/AtcButton";
 import WishListButton from "@/components/WishListButton";
+import axios from "axios";
 
 export default {
   components: {WishListButton, AtcButton, ProductCard},
   data() {
     return {
-      resultData : projectData.data,
+      resultData : {},
     }
   },
+  methods: {
+    getData: function () {
+      axios.get('http://localhost:3030/products')
+          .then(resp => {
+            console.log(resp);
+            this.resultData = resp.data.data;
+          })
+          .catch(err => {
+            console.log(err);
+            this.resultData = {};
+          })
+    }
+  },
+  mounted() {
+    this.getData();
+  }
 }
 </script>
